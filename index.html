@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Motivation App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #4a4a4a;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+            min-height: 60px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5563c1;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌟 Daily Motivation 🌟</h1>
+    <p id="quote">Click the button to get motivated!</p>
+    <button onclick="newQuote()">Get Motivation</button>
+    <footer>Experiment 14 – DevOps Lab</footer>
+</div>
+
+<script>
+    const quotes = [
+        "Believe in yourself and all that you are.",
+        "Every day is a second chance.",
+        "Success doesn’t come from what you do occasionally, it comes from what you do consistently.",
+        "Don’t watch the clock; do what it does. Keep going.",
+        "Dream it. Wish it. Do it.",
+        "Your limitation—it’s only your imagination.",
+        "Push yourself, because no one else is going to do it for you.",
+        "Great things never come from comfort zones."
+    ];
+
+    function newQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
